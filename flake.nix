@@ -13,12 +13,12 @@
       bp = inputs.blueprint { inherit inputs; prefix = "nix/outputs"; };
     in
     bp // {
-      overlays.default = final: _prev: 
+      overlays.default = final: prev: 
       let
         packages = bp.mkPackagesFor final;
       in
         {
-          fishPlugins.direnv-shell-hooks = packages.fish;
+          fishPlugins = prev.fishPlugins // { direnv-shell-hooks = packages.fish; };
         };
     };
 }
