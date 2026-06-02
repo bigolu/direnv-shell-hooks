@@ -14,5 +14,12 @@ perSystem.devshell.mkShell (
     ]);
 
     gcRoot.roots.flake.inputs = inputs;
+
+    startup.repl-overlay.text = ''
+      export NIX_CONFIG="
+        ''${NIX_CONFIG:-}
+        extra-repl-overlays = $PRJ_ROOT/nix/repl-overlay.nix
+      "
+    '';
   }
 )

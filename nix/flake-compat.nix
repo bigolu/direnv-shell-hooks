@@ -19,7 +19,6 @@ let
 
   flake = import flake-compat {
     src = ../.;
-    # See the comment at the top of the file for why this is done.
     copySourceTreeToStore = false;
   };
 in

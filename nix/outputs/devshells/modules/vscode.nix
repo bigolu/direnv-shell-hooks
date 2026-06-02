@@ -9,10 +9,8 @@
         # efm-langserver launches commands with`sh`
         dash
         # These are used in the efm-langserver config
-        actionlint
         markdownlint-cli2
         statix
-        shellcheck
       ];
     }
   ];
@@ -22,5 +20,7 @@
     nixd
     # For extension "ndonfris.fish-lsp"
     fish-lsp
+    # For extension "mads-hartmann.bash-ide-vscode"
+    shellcheck
   ];
 }
