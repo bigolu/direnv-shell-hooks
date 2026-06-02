@@ -1,7 +1,4 @@
 { pkgs, ... }:
-let
-  inherit (pkgs) coreutils;
-in
 {
   imports = [
     # For extension "maximsmol.vscode-lsp-generic"

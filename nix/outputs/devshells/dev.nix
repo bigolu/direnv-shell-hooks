@@ -1,6 +1,6 @@
 { perSystem, inputs, ... }:
 perSystem.devshell.mkShell (
-  { extraModulesPath, pkgs, ... }:
+  { extraModulesPath, ... }:
   {
     imports = [
       "${extraModulesPath}/locale.nix"
