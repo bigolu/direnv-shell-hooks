@@ -6,8 +6,8 @@ pkgs.callPackage (
     version = "0-unstable";
 
     src = lib.fileset.toSource {
-      root = ../..;
-      fileset = inputs.globset.lib.globs ../.. ["conf.d/_direnv-shell-hooks.fish"];
+      root = ../../..;
+      fileset = inputs.globset.lib.globs ../../.. ["conf.d/_direnv-shell-hooks.fish"];
     };
 
     meta = {
